@@ -70,7 +70,7 @@ pub struct Sub<'info>{
     pub signer:Signer<'info>
 }
 #[derive(Accounts)]
-pub struct Halve{
+pub struct Halve<'info>{
        #[account(mut)]
     pub account:Account<'info,DataShape>,
     #[account(mut)]

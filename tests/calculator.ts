@@ -2,6 +2,7 @@ import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
 import { Calculator } from "../target/types/calculator";
 import { assert } from "chai";
+import { it } from "mocha";
 
 describe("calculator", () => {
   // Configure the client to use the local cluster.
@@ -57,14 +58,33 @@ const tx = await program.methods
     .rpc()
     console.log("tx id gone through",tx)
     const new_count = await program.account.dataShape.fetch(newAccount.publicKey)
-    console.log(new_count.count)
-    console.log(previous_count.count+12)
-
     assert.equal(previous_count.count+12,new_count.count)
   })
   
   it("half",async()=>{
     const previous_count  = await program.account.dataShape.fetch(newAccount.publicKey)
-    const tx = await program
+    const tx = await program.methods.halve()
+    .accounts({
+      account:newAccount.publicKey,
+      signer:anchor.getProvider().wallet.publicKey
   })
+  .rpc()
+   console.log("Your transaction signature", tx);
+const new_count= await program.account.dataShape.fetch(newAccount.publicKey)
+assert.equal(previous_count.count,new_count.count*2)
+})
+
+it("subtract ",async ()=>{
+  const previous_count= await program.account.dataShape.fetch(newAccount.publicKey)
+    const tx = await program.methods.sub(2)
+    .accounts({
+      account:newAccount.publicKey,
+      signer:anchor.getProvider().wallet.publicKey
+    })
+    .rpc()
+ console.log("Your transaction signature", tx);
+  const new_count = await program.account.dataShape.fetch(newAccount.publicKey)
+ 
+  assert.equal(previous_count.count-2,new_count.count)
+})
 });
