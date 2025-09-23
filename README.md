@@ -73,6 +73,9 @@ If you see an error like:
      Error: Account does not exist or has no data G84G55L4EzqMooQJcrWfdUcmZeRPDBon9BfV2GiWHo6i
       at AccountClient.fetch (node_modules/@coral-xyz/anchor/src/program/namespace/account.ts:168:13)
       at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+      error Command failed with exit code 5.
+      info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
 #### Follow these steps:
