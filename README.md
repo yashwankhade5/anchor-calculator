@@ -72,7 +72,7 @@ anchor test
 The included TypeScript client allows you to interact with the calculator contract.
 You can call methods like init, add, sub, double, and halve through the client.
 
-License
+## License
 
 This project is open source and available under the MIT License.
 
