@@ -47,7 +47,7 @@ declare_id mismatch
 
 #### Follow these steps:
 
-   1. Copy the Program ID that appears in the mismatch error.
+   1. Copy the Program ID that appears in the mismatch error.it is prsent in error like "program Id : <programID>"
 
    2. Replace the declare_id! in your Rust code with the new program ID:
 
