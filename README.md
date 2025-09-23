@@ -41,8 +41,38 @@ anchor test
 ```
 ### Handling declare_id mismatch
 If you see an error like:
-```text
-declare_id mismatch
+```markdown
+ 1) calculator
+       Is initialized!:
+     Error: AnchorError occurred. Error Code: DeclaredProgramIdMismatch. Error Number: 4100. Error Message: The declared program id does not match the actual program id.       
+      at AnchorError.parse (node_modules/@coral-xyz/anchor/src/error.ts:136:14)
+      at translateError (node_modules/@coral-xyz/anchor/src/error.ts:277:35)
+      at MethodsBuilder.rpc [as _rpcFn] (node_modules/@coral-xyz/anchor/src/program/namespace/rpc.ts:35:29)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  2) calculator
+       double:
+     Error: Account does not exist or has no data G84G55L4EzqMooQJcrWfdUcmZeRPDBon9BfV2GiWHo6i
+      at AccountClient.fetch (node_modules/@coral-xyz/anchor/src/program/namespace/account.ts:168:13)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  3) calculator
+       add :
+     Error: Account does not exist or has no data G84G55L4EzqMooQJcrWfdUcmZeRPDBon9BfV2GiWHo6i
+      at AccountClient.fetch (node_modules/@coral-xyz/anchor/src/program/namespace/account.ts:168:13)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  4) calculator
+       half:
+     Error: Account does not exist or has no data G84G55L4EzqMooQJcrWfdUcmZeRPDBon9BfV2GiWHo6i
+      at AccountClient.fetch (node_modules/@coral-xyz/anchor/src/program/namespace/account.ts:168:13)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+  5) calculator
+       subtract :
+     Error: Account does not exist or has no data G84G55L4EzqMooQJcrWfdUcmZeRPDBon9BfV2GiWHo6i
+      at AccountClient.fetch (node_modules/@coral-xyz/anchor/src/program/namespace/account.ts:168:13)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
 ```
 
 #### Follow these steps:
