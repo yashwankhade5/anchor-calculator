@@ -48,7 +48,7 @@ Deploying cluster: http://127.0.0.1:8899
 Upgrade authority: /home/toor/.config/solana/id.json
 Deploying program "calculator"...
 Program path: /mnt/d/harkirat anchor contract/week_38/New folder/anchor-calculator/target/deploy/calculator.so...
-Program Id: AaK6vJkBcHU613578v32Z9aZwa7uVyoeTxbmqhc7fLB7                                
+***Program Id: AaK6vJkBcHU613578v32Z9aZwa7uVyoeTxbmqhc7fLB7 ***                               
 
 Signature: 56brPgy27BitAR6EJQhkShYX22EwsCt5t7YKn1LZySBbYqPTJpisDHEHUhFmVfYuNKEzGHZZXGxpXhszsYKq8tk2
 
